@@ -1,0 +1,15 @@
+
+{
+    "name": "Weather App",
+    "short_name": "WApp",
+    "icons" : [{
+        "src" : "applogo.png",
+        "size" : "512x512",
+        "type" : "image/png"
+    }],
+    "start_url" : "/index.html",
+    "display" : "standalone",
+    "orientation": "portrait",
+    "backgorund_color": "#ff00ff",
+    "theme_color": "#3f024f"
+}

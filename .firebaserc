@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "weather-app-f53ca",
+    "mws-weather-app": "weather-app-f53ca"
+  }
+}
