@@ -46,60 +46,61 @@
 -->
     <!--Weather app script-->
     <div>
-        <span>Get latest weather information</span>
-        <p>Current weather information for NYC</p>
-        <form method="GET" action="">
-        <!--<p><input type="text" id="weather-search" size="30" placeholder="Enter location for weather information" title="Enter location for weather information" /></p>-->
-        <p><input type="button" value="GetWeather" id="btnSearch" name="btnSearch" /></p>
-        </form>
+        <span id="weather-header"  style="text-align: center;"><h3>Get latest weather information</h3></span>
         <div>
-            <span id="cur-weather">Current Weather information for New York City</span>
+            <span id="cur-weather">Current Weather information for New York City (relative to viewer's timezone)</span>
+            <br >
+        </div>
             <div id="weather-result">
                 <div id="location-id">
                     <ul>
-                        <li>Location Logitude:<div id="log"></div> </li>
-                        <li>Location Latitude: <div id="lat"></div> </li>
+                        <li>Location Logitude<div id="log"></div> </li>
+                        <li>Location Latitude <div id="lat"></div> </li>
                         <li>Time: <div id="curtime"></div></li>
                     </ul>
                 </div>
                 <div id="temp">
                     <ul>
-                        <li id="">Current Temperature (K) (Hourly): <div id="cur-temp"></div> </li>
-                        <li id="">Current Min Temperature (K) (Daily): <div id="min-temp"></div></li>
-                        <li id="">Current Max Temperature (K) (Current): <div id="max-temp"></div></li>
-                        <li id="">Day Temperature: <div id="day-temp"></div></li>
+                        <li id="">Current Temperature (K) (Hourly) <div id="cur-temp"></div> </li>
+                        <li id="">Current Min Temperature (K) (Daily) <div id="min-temp"></div></li>
+                        <li id="">Current Max Temperature (K) (Current) <div id="max-temp"></div></li>
+                        <li id="">Day Temperature <div id="day-temp"></div></li>
                         <div>
-                            <li id="">Morning Temperature: <div id="morn-temp"></div></li>
-                            <li id="">Evening Temperature: <div id="even-temp"></div></li>
-                            <li id="">Night Temperature: <div id="night-temp"></div></li>
+                            <li id="">Morning Temperature <div id="morn-temp"></div></li>
+                            <li id="">Evening Temperature <div id="even-temp"></div></li>
+                            <li id="">Night Temperature <div id="night-temp"></div></li>
                         </div>
-                        <li id="">Weather Condition: <div id="weather1"></div></li>
-                        <li id="">Weather Severity: <div id="weather2"></div></li>
+                        <li id="">Weather Condition <div id="weather1"></div></li>
+                        <li id="">Weather Severity <div id="weather2"></div></li>
                     </ul>
                 </div>
                 <div id="feels">
                     <ul>
-                        <li id="">Feels like: <div id="feels-like"></div></li>
-                        <li id="">Day (Feels like): <div id="feels-day"></div></li>
-                        <li id="">Morning (Feels like): <div id="feels-morning"></div></li>
-                        <li id="">Evening (Feels like): <div id="feels-evening"></div></li>
-                        <li id="">Night (Feels like): <div id="feels-night"></div></li>
+                        <li id="">Feels like <div id="feels-like"></div></li>
+                        <li id="">Day (Feels like) <div id="feels-day"></div></li>
+                        <li id="">Morning (Feels like) <div id="feels-morning"></div></li>
+                        <li id="">Evening (Feels like) <div id="feels-evening"></div></li>
+                        <li id="">Night (Feels like) <div id="feels-night"></div></li>
                     </ul>
                 </div>
                 <div id="weather">
                     <ul>
-                        <li id="">Weather Pressure: <div id="weather-pressure"></div></li>
-                        <li id="">Weather Humidity: <div id="weather-humidity"></div></li>
-                        <li id="">Weather Dew Point: <div id="weather-dew-point"></div></li>
-                        <li id="">Weather Visibility: <div id="weather-visibility"></div></li>
-                        <li id="">Weather UVI: <div id="weather-uvi"></div></li>
-                        <li id="">Weather Cloud: <div id="weather-cloud"></div></li>
+                        <li id="">Weather Pressure <div id="weather-pressure"></div></li>
+                        <li id="">Weather Humidity <div id="weather-humidity"></div></li>
+                        <li id="">Weather Dew Point <div id="weather-dew-point"></div></li>
+                        <li id="">Weather Visibility <div id="weather-visibility"></div></li>
+                        <li id="">Weather UVI <div id="weather-uvi"></div></li>
+                        <li id="">Weather Cloud <div id="weather-cloud"></div></li>
                     </ul>
                 </div>
             </div>
+            <form method="GET" action="">
+              <!--<p><input type="text" id="weather-search" size="30" placeholder="Enter location for weather information" title="Enter location for weather information" /></p>-->
+              <div id="btnpos"><input type="button" value="Get Weather" id="btnSearch" name="btnSearch" /></div>
+              </form>
         </div>
+     
        <!---->
-    </div>
         <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="/__/firebase/7.20.0/firebase-app.js"></script>
 
