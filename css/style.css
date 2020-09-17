@@ -4,7 +4,7 @@
     width: fit-content;
     height: fit-content;
     border-style: groove;
-    box-shadow: 5px -3px 5px teal;set;
+    box-shadow: 5px -3px 5px teal;
 
 }
 
@@ -15,7 +15,7 @@
     height: fit-content;
     border-style: groove;
     margin: 2%;
-    box-shadow: 5px -3px 5px teal;set;
+    box-shadow: 5px -3px 5px teal;
 
 }
 
@@ -26,7 +26,7 @@
     height: fit-content;
     border-style: groove;
     margin: 2%;
-    box-shadow: 5px -3px 5px teal;set;
+    box-shadow: 5px -3px 5px teal;
 }
 
 #feels 
@@ -36,21 +36,79 @@
     height: fit-content;
     border-style: groove;
     margin: 2%;
-    box-shadow: 5px -3px 5px teal;set;
+    box-shadow: 5px -3px 5px teal;
 }
 
 #weather-result
 {
     display: flex;
+    margin-left: 30%;
 }
 
 #cur-weather
 {
     text-align: center;
     text-decoration: wavy;
+    margin-left: 20%;
 }
 
 li 
 {
     list-style-type: none;
+    text-align: center;
+}
+
+li div
+{
+    font-weight: bold;
+}
+
+input
+{
+    align-items: center;
+    color: bisque;
+    background-color: azure;
+    
+}
+
+#quick-weather-info
+{
+    font-weight: bold;
+    display: flex;
+    align-content: center;
+    margin-left: 40%;
+    margin-bottom: 2%;
+}
+
+.weather-info 
+{
+    font-weight: bold;
+}
+
+#weather-header
+{
+    margin-left: 40%;
+}
+
+#weather-header-text
+{
+    flex-wrap: wrap;
+}
+
+body 
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#brief-weather-info
+{
+    display: flex;
+    margin-left: 40%;
+}
+
+#full-weather-result
+{
+    margin-top: 400px;
+    display: flex;
+    margin-left: 30%;
 }

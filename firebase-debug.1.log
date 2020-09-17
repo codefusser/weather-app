@@ -1,0 +1,44 @@
+[debug] [2020-09-11T17:36:38.072Z] ----------------------------------------------------------------------
+[debug] [2020-09-11T17:36:38.075Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-09-11T17:36:38.075Z] CLI Version:   8.10.0
+[debug] [2020-09-11T17:36:38.075Z] Platform:      win32
+[debug] [2020-09-11T17:36:38.075Z] Node Version:  v12.18.3
+[debug] [2020-09-11T17:36:38.076Z] Time:          Fri Sep 11 2020 18:36:38 GMT+0100 (West Africa Standard Time)
+[debug] [2020-09-11T17:36:38.077Z] ----------------------------------------------------------------------
+[debug] [2020-09-11T17:36:38.077Z] 
+[debug] [2020-09-11T17:36:38.085Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-11T17:36:38.086Z] > authorizing via signed-in user
+[debug] [2020-09-11T17:36:38.086Z] [iam] checking project weather-app-f53ca for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-09-11T17:36:38.089Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/weather-app-f53ca:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-09-11T17:36:39.253Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 11 Sep 2020 17:36:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=560","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-11T17:36:39.256Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/weather-app-f53ca  
+ 
+[debug] [2020-09-11T17:36:39.734Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 11 Sep 2020 17:36:39 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'weather-app-f53ca'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-09-11T17:36:39.755Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/weather-app-f53ca/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-09-11T17:36:43.926Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 11 Sep 2020 17:36:43 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[weather-app-f53ca]: beginning deploy... 
+[debug] [2020-09-11T17:36:44.340Z] Error: EPERM: operation not permitted, scandir 'c:/Websites/PWA/weather-app/firebase-debug.log'
+    at Object.readdirSync (fs.js:955:3)
+    at GlobSync._readdir (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:288:41)
+    at GlobSync._readdirInGlobStar (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:245:17)
+    at GlobSync._readdir (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:276:17)
+    at GlobSync._processReaddir (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:137:22)
+    at GlobSync._process (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:132:10)
+    at GlobSync._processGlobStar (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:380:10)
+    at GlobSync._process (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:130:10)
+    at new GlobSync (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:48:10)
+    at Function.globSync [as sync] (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\glob\sync.js:26:10)
+    at listFiles (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\lib\listFiles.js:6:19)
+    at _runDeploys (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:30:23)
+    at module.exports (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\hosting\deploy.js:66:12)
+    at _chain (C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:22:40)
+    at C:\Users\SHOPINVERSE.COM\AppData\Roaming\npm\node_modules\firebase-tools\lib\deploy\index.js:66:16
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+[error] 
+[error] Error: An unexpected error has occurred.

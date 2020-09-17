@@ -22,7 +22,10 @@ function getLocalStorage(fieldid)
 }
 
 //make a get request retrieve json object from the weather API
-
+/*document.body.addEventListener("onload") = () => 
+{
+  //document.getElementById("full-weather-result").innerText = "";
+}*/
 let apiobject = {};
 let req = new XMLHttpRequest();
 let weather_location = document.getElementById("weather-search");
@@ -46,6 +49,9 @@ let url = "https://api.openweathermap.org/data/2.5/onecall?lat=40.7142700&lon=-7
        // localStorage.setItem('weather-search', document.getElementById('weather-search').value);
         //document.getElementById('weather-search').value = localStorage.getItem('weather-search');
         //let weather_lon = log;
+        setLocalStore('feel-weather', "Feels like  :");
+        document.getElementById('feel-weather').innerText = getLocalStorage('feel-weather');
+
         setLocalStore('log', apiobject.lon);
         document.getElementById("log").innerText = getLocalStorage('log');
         setLocalStore('lat', apiobject.lat);
@@ -64,39 +70,51 @@ let url = "https://api.openweathermap.org/data/2.5/onecall?lat=40.7142700&lon=-7
         
         setLocalStore('cur-temp', apiobject.current.temp) 
         document.getElementById("cur-temp").innerText = getLocalStorage('cur-temp');
-        
+        document.getElementById("cur-temp").innerText += " K";
+
         setLocalStore('min-temp', apiobject.daily[0].temp.min);
         document.getElementById('min-temp').innerText = getLocalStorage('min-temp');
-        
+        document.getElementById("min-temp").innerText += " K";
+
         setLocalStore('max-temp', apiobject.daily[0].temp.max);
         document.getElementById('max-temp').innerText = getLocalStorage('max-temp');
-        
+        document.getElementById('max-temp').innerText += " K";
+
         setLocalStore('day-temp', apiobject.daily[0].temp.day);
         document.getElementById('day-temp').innerText = getLocalStorage('day-temp');
-        
+        document.getElementById('day-temp').innerText += " K";
+
         setLocalStore('morn-temp', apiobject.daily[0].temp.morn);
         document.getElementById('morn-temp').innerText = getLocalStorage('morn-temp');
-        
+        document.getElementById('morn-temp').innerText += " K";
+
         setLocalStore('even-temp', apiobject.daily[0].temp.eve);
         document.getElementById('even-temp').innerText = getLocalStorage('even-temp');
-        
+        document.getElementById('even-temp').innerText += " K";
+
         setLocalStore('night-temp', apiobject.daily[0].temp.night);
         document.getElementById('night-temp').innerText = getLocalStorage('night-temp');
+        document.getElementById('night-temp').innerText += " K";
 
         setLocalStore('feels-like', apiobject.daily[0].feels_like.day);
         document.getElementById("feels-like").innerText = getLocalStorage("feels-like");
+        document.getElementById("feels-like").innerText += " K";
 
         setLocalStore('feels-day', apiobject.daily[0].feels_like.day);
         document.getElementById("feels-day").innerText = getLocalStorage("feels-day");
+        document.getElementById("feels-day").innerText += " K";
 
         setLocalStore('feels-morning', apiobject.daily[0].feels_like.morn);
         document.getElementById("feels-morning").innerText = getLocalStorage("feels-morning");
+        document.getElementById("feels-morning").innerText += " K";
 
         setLocalStore('feels-evening', apiobject.daily[0].feels_like.eve);
         document.getElementById("feels-evening").innerText = getLocalStorage("feels-evening");
+        document.getElementById("feels-evening").innerText += " K";
 
         setLocalStore('feels-night', apiobject.daily[0].feels_like.night);
         document.getElementById("feels-night").innerText = getLocalStorage("feels-night");
+        document.getElementById("feels-night").innerText += " K";
 
         setLocalStore('weather-pressure', apiobject.daily[0].pressure);
         document.getElementById('weather-pressure').innerText = getLocalStorage('weather-pressure');
@@ -131,46 +149,59 @@ let url = "https://api.openweathermap.org/data/2.5/onecall?lat=40.7142700&lon=-7
         //let weather_lon = log;
         //localStorage.setItem("log", apiobject.lon);
        // if (getLocalStorage('log') !== undefined)
-        //{
+        //{          
         document.getElementById("log").innerText = getLocalStorage('log');
         //}
         //document.getElementById("log").innerText = localStorage.getItem("log");
         document.getElementById("lat").innerText = getLocalStorage('lat');
         document.getElementById("weather1").innerText = getLocalStorage("weather1");
         document.getElementById("weather2").innerText = getLocalStorage("weather2");
+        document.getElementById('feel-weather').innerText = getLocalStorage('feel-weather');
         //construct the date
         // setLocalStore('curtime', formatted_date);
         document.getElementById("curtime").innerText = getLocalStorage('curtime');
         //setLocalStore('cur-temp', apiobject.current.temp) 
         document.getElementById("cur-temp").innerText = getLocalStorage('cur-temp');
+        document.getElementById("cur-temp").innerText += " K";
         //setLocalStore('min-temp', apiobject.daily[0].temp.min);
         document.getElementById('min-temp').innerText = getLocalStorage('min-temp');
+        document.getElementById("min-temp").innerText += " K";
         //setLocalStore('max-temp', apiobject.daily[0].temp.max);
         document.getElementById('max-temp').innerText = getLocalStorage('max-temp');
+        document.getElementById('max-temp').innerText += " K";
         //setLocalStore('day-temp', apiobject.daily[0].temp.day);
         document.getElementById('day-temp').innerText = getLocalStorage('day-temp');
+        document.getElementById('day-temp').innerText += " K";
         //setLocalStore('morn-temp', apiobject.daily[0].temp.morn);
         document.getElementById('morn-temp').innerText = getLocalStorage('morn-temp');
+        document.getElementById('morn-temp').innerText += " K";
         // setLocalStore('even-temp', apiobject.daily[0].temp.eve);
         document.getElementById('even-temp').innerText = getLocalStorage('even-temp');
+        document.getElementById('even-temp').innerText += " K";
         
         // setLocalStore('night-temp', apiobject.daily[0].temp.night);
         document.getElementById('night-temp').innerText = getLocalStorage('night-temp');
+        document.getElementById('night-temp').innerText += " K";
 
         // setLocalStore('feels-like', apiobject.daily[0].feels_like.day);
         document.getElementById("feels-like").innerText = getLocalStorage("feels-like");
+        document.getElementById("feels-like").innerText += " K";
 
         // setLocalStore('feels-day', apiobject.daily[0].feels_like.day);
         document.getElementById("feels-day").innerText = getLocalStorage("feels-day");
+        document.getElementById("feels-day").innerText += " K";
 
         // setLocalStore('feels-morning', apiobject.daily[0].feels_like.morning);
         document.getElementById("feels-morning").innerText = getLocalStorage("feels-morning");
+        document.getElementById("feels-morning").innerText += " K";
 
         // setLocalStore('feels-evening', apiobject.daily[0].feels_like.evening);
         document.getElementById("feels-evening").innerText = getLocalStorage("feels-evening");
+        document.getElementById("feels-evening").innerText += " K";
 
         // setLocalStore('feels-night', apiobject.daily[0].feels_like.night);
         document.getElementById("feels-night").innerText = getLocalStorage("feels-night");
+        document.getElementById("feels-night").innerText += " K";
 
         // setLocalStore('weather-pressure', apiobject.daily[0].pressure);
         document.getElementById('weather-pressure').innerText = getLocalStorage('weather-pressure');
@@ -218,4 +249,5 @@ let url = "https://api.openweathermap.org/data/2.5/onecall?lat=40.7142700&lon=-7
   
 req.send();
 
-
+var weather_img = document.getElementById("weather-img");
+weather_img.onclick = btnSearch.onclick;

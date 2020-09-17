@@ -8,7 +8,8 @@
     <title>Building a PWAs</title>
     <link rel="manifest" href="manifest.json" />
     <link href="css/style.css" type="text/css" rel="stylesheet" />
-
+  
+    <link rel="shortcut icon" href="icons/weather_icon.ico" />
     <!-- update the version number as needed -->
     <script defer src="/__/firebase/7.20.0/firebase-app.js"></script>
     <!-- include only the Firebase features as you need -->
@@ -46,17 +47,35 @@
 -->
     <!--Weather app script-->
     <div>
-        <span id="weather-header"  style="text-align: center;"><h3>Get latest weather information</h3></span>
+        <div id="weather-header"><h2 id="weather-header-text">Get latest <span><img id="weather-img" src="images/weather-logo.png" /></span> information</h2></div>
         <div>
-            <span id="cur-weather">Current Weather information for New York City (relative to viewer's timezone)</span>
+            <span id="cur-weather"><h4>Current Weather information for New York City (relative to viewer's timezone)</h4></span>
             <br >
+            <div id="quick-weather-info" class="weather-info"><span id="feel-weather"></span> <span id="feels-like" class="weather-info"></span> &nbsp;&nbsp; <span id="weather2" class="weather-info"></span>&nbsp;&nbsp; <span id="weather1" class="weather-info"></span></div>
+
         </div>
-            <div id="weather-result">
+        <div>
+          <div id="quick-weather-info" class="weather-info"><span id="feel-weather"></span> <span id="feels-like" class="weather-info"></span> &nbsp;&nbsp; <span id="weather2" class="weather-info"></span>&nbsp;&nbsp; <span id="weather1" class="weather-info"></span></div>
+          <div id="brief-weather-info">
+            <img src="images/pressure.PNG" width="50px" height="50px" alt="pressure" title="pressure" /> <div id="weather-pressure"></div>
+            <img src="images/humidity.PNG" width="50px" height="50px" alt="humidity" title="humidity" /><div id="weather-humidity"></div>
+            <img src="images/uvi.PNG" width="50px" height="50px" alt="uvi" title="uvi" /> <div id="weather-uvi"></div> 
+            <img src="images/dewpoint.PNG" width="50px" height="50px" alt="dew point" title="dew point"/> <div id="weather-dew-point"></div>
+            <img src="images/visibility.PNG" width="50px" height="50px" alt="visibility" title="visibility" /> <div id="weather-visibility"></div>
+          </div>
+
+          <div id="weather-result">
+            <div id="location-id">
+            <img src="images/daytime.PNG" width="50px" alt="time" title="date and time" height="50px" />   
+            <div id="curtime"></div>
+                
+          </div>
+        </div>
+             <div id="full-weather-result">
                 <div id="location-id">
                     <ul>
                         <li>Location Logitude<div id="log"></div> </li>
                         <li>Location Latitude <div id="lat"></div> </li>
-                        <li>Time: <div id="curtime"></div></li>
                     </ul>
                 </div>
                 <div id="temp">
